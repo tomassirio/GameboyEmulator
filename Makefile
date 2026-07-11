@@ -2,8 +2,8 @@ IDIR := ./include
 BIN := ./bin
 
 CC := gcc
-CFLAGS := -I $(IDIR) 
-DEBUG_FLAGS := -g -Wall -Wextra -pedantic -Werror
+CFLAGS := -I $(IDIR) -g 
+DEBUG_FLAGS := -Wall -Wextra -pedantic -Werror
 
 TARGET := cpu
 SRCS := $(wildcard *.c)

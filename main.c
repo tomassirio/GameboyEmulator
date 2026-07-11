@@ -2,9 +2,9 @@
 #include "include/cpu.h"
 
 int main() {
-    Registers tuvi;
-    RAM ram;
-    Video_RAM v_ram;
+    Registers tuvi = {0};
+    RAM ram = {0};
+    Video_RAM v_ram = {0};
     CPU cpu = {&tuvi, &ram, &v_ram};
     runCycle(&cpu);
     

@@ -18,9 +18,14 @@ OP_CODE decode(uint16_t instruction) {
 }
 
 int execute(OP_CODE op_code, CPU *cpu) {
+    Instruction instruction = op_code.instruction;
+    if (instruction == NULL) {
+        printf("No existing instruction");
+        return -1;
+    }
     Operand dst = op_code.dst;
     Operand src = op_code.src;
-    op_code.instruction(cpu, dst, src);
+    instruction(cpu, dst, src);
     return op_code.cycles;
 }
 
